@@ -1,0 +1,6 @@
+framework module Pods_KYBaseKit_Example {
+  umbrella header "Pods-KYBaseKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

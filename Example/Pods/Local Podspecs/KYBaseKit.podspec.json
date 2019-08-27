@@ -1,0 +1,22 @@
+{
+  "name": "KYBaseKit",
+  "version": "0.1.0",
+  "summary": "A short description of KYBaseKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://gitee.com/kyd_iOSGroup/KYBaseKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "longer": "504010900@qq.com"
+  },
+  "source": {
+    "git": "https://gitee.com/kyd_iOSGroup/KYBaseKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "KYBaseKit/Classes/**/*"
+}
