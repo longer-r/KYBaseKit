@@ -38,6 +38,10 @@
 		C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = D3067EAFD5B0A06885968D137840DB70 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D00A69711899CA08379A09D0BF5ACDC3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = E354F8FD537351F26F7949B4EBFA5101 /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D04F3FB62316851D00E650AD /* UIDevice+KY.h in Headers */ = {isa = PBXBuildFile; fileRef = D04F3FB42316851D00E650AD /* UIDevice+KY.h */; };
+		D04F3FB72316851D00E650AD /* UIDevice+KY.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F3FB52316851D00E650AD /* UIDevice+KY.m */; };
+		D04F3FBA2316897500E650AD /* KYVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D04F3FB82316897400E650AD /* KYVersionManager.m */; };
+		D04F3FBB2316897500E650AD /* KYVersionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D04F3FB92316897400E650AD /* KYVersionManager.h */; };
 		D05EE5802315266C006C849C /* KYOpenUDID.h in Headers */ = {isa = PBXBuildFile; fileRef = D05EE57E2315266C006C849C /* KYOpenUDID.h */; };
 		D05EE5812315266C006C849C /* KYOpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EE57F2315266C006C849C /* KYOpenUDID.m */; };
 		D05EE58423161546006C849C /* YKNetworkMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = D05EE58223161546006C849C /* YKNetworkMonitor.h */; };
@@ -48,8 +52,12 @@
 		D05EE58D23167168006C849C /* NSString+KY.h in Headers */ = {isa = PBXBuildFile; fileRef = D05EE58B23167168006C849C /* NSString+KY.h */; };
 		D05EE5902316750B006C849C /* NSNumber+KY.h in Headers */ = {isa = PBXBuildFile; fileRef = D05EE58E2316750B006C849C /* NSNumber+KY.h */; };
 		D05EE5912316750B006C849C /* NSNumber+KY.m in Sources */ = {isa = PBXBuildFile; fileRef = D05EE58F2316750B006C849C /* NSNumber+KY.m */; };
-		D05EE595231675AF006C849C /* KYVersionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D05EE593231675AF006C849C /* KYVersionManager.h */; };
-		D09F30D5231676A30065E334 /* KYVersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F30D4231676A30065E334 /* KYVersionManager.m */; };
+		D09F30D8231678DE0065E334 /* UIImage+KY.h in Headers */ = {isa = PBXBuildFile; fileRef = D09F30D6231678DE0065E334 /* UIImage+KY.h */; };
+		D09F30D9231678DE0065E334 /* UIImage+KY.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F30D7231678DE0065E334 /* UIImage+KY.m */; };
+		D09F30DC231679830065E334 /* KYSimulateIDFA.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F30DA231679830065E334 /* KYSimulateIDFA.m */; };
+		D09F30DD231679830065E334 /* KYSimulateIDFA.h in Headers */ = {isa = PBXBuildFile; fileRef = D09F30DB231679830065E334 /* KYSimulateIDFA.h */; };
+		D09F30E423167F840065E334 /* UIApplication+KY.h in Headers */ = {isa = PBXBuildFile; fileRef = D09F30E223167F840065E334 /* UIApplication+KY.h */; };
+		D09F30E523167F840065E334 /* UIApplication+KY.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F30E323167F840065E334 /* UIApplication+KY.m */; };
 		DAE378D4E312B60D304302B4F9ADFC62 /* Pods-KYBaseKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD4F33367042B55015999A9021C9A54 /* Pods-KYBaseKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E0B8D095C732352C854D365B9E5B993D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAA89EEF1039078430D7A886477E365 /* UIKit.framework */; };
 		E76B8ED6FC25F8E66A2A3EF3D77A7110 /* KYKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = E8158460A8B69AA2D957FDBC3A0BE90C /* KYKeychain.m */; };
@@ -134,6 +142,10 @@
 		BFC0101AAFD30AF7A533651690D13E0D /* KYBaseKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KYBaseKit-dummy.m"; sourceTree = "<group>"; };
 		C15407A80849C8126A8D550C80F56721 /* Pods-KYBaseKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KYBaseKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C746D571D08E5B0BD1E215F60AB1E816 /* Pods-KYBaseKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-KYBaseKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D04F3FB42316851D00E650AD /* UIDevice+KY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+KY.h"; sourceTree = "<group>"; };
+		D04F3FB52316851D00E650AD /* UIDevice+KY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+KY.m"; sourceTree = "<group>"; };
+		D04F3FB82316897400E650AD /* KYVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYVersionManager.m; sourceTree = "<group>"; };
+		D04F3FB92316897400E650AD /* KYVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYVersionManager.h; sourceTree = "<group>"; };
 		D05EE57E2315266C006C849C /* KYOpenUDID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KYOpenUDID.h; sourceTree = "<group>"; };
 		D05EE57F2315266C006C849C /* KYOpenUDID.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KYOpenUDID.m; sourceTree = "<group>"; };
 		D05EE58223161546006C849C /* YKNetworkMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKNetworkMonitor.h; sourceTree = "<group>"; };
@@ -144,8 +156,12 @@
 		D05EE58B23167168006C849C /* NSString+KY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KY.h"; sourceTree = "<group>"; };
 		D05EE58E2316750B006C849C /* NSNumber+KY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+KY.h"; sourceTree = "<group>"; };
 		D05EE58F2316750B006C849C /* NSNumber+KY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+KY.m"; sourceTree = "<group>"; };
-		D05EE593231675AF006C849C /* KYVersionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYVersionManager.h; sourceTree = "<group>"; };
-		D09F30D4231676A30065E334 /* KYVersionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYVersionManager.m; sourceTree = "<group>"; };
+		D09F30D6231678DE0065E334 /* UIImage+KY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+KY.h"; sourceTree = "<group>"; };
+		D09F30D7231678DE0065E334 /* UIImage+KY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KY.m"; sourceTree = "<group>"; };
+		D09F30DA231679830065E334 /* KYSimulateIDFA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KYSimulateIDFA.m; sourceTree = "<group>"; };
+		D09F30DB231679830065E334 /* KYSimulateIDFA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYSimulateIDFA.h; sourceTree = "<group>"; };
+		D09F30E223167F840065E334 /* UIApplication+KY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+KY.h"; sourceTree = "<group>"; };
+		D09F30E323167F840065E334 /* UIApplication+KY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+KY.m"; sourceTree = "<group>"; };
 		D3067EAFD5B0A06885968D137840DB70 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
 		D67AA4D55FF48B326205A0EB93201461 /* Pods_KYBaseKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KYBaseKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8093DA08366D6AED45A93FD72F60A07 /* Pods-KYBaseKit_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KYBaseKit_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -301,6 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				60B641CB8D5EBA61F5766409A0D32C52 /* KYBaseMacro.h */,
+				D09F30DB231679830065E334 /* KYSimulateIDFA.h */,
+				D09F30DA231679830065E334 /* KYSimulateIDFA.m */,
 				D05EE58B23167168006C849C /* NSString+KY.h */,
 				D05EE58A23167167006C849C /* NSString+KY.m */,
 				16E0FB86738F1D983E09EB114271A279 /* KYKeychain.h */,
@@ -316,9 +334,15 @@
 				D05EE58623161A0B006C849C /* UIColor+YK.h */,
 				D05EE58723161A0B006C849C /* UIColor+YK.m */,
 				D05EE58E2316750B006C849C /* NSNumber+KY.h */,
+				D04F3FB92316897400E650AD /* KYVersionManager.h */,
+				D04F3FB82316897400E650AD /* KYVersionManager.m */,
 				D05EE58F2316750B006C849C /* NSNumber+KY.m */,
-				D05EE593231675AF006C849C /* KYVersionManager.h */,
-				D09F30D4231676A30065E334 /* KYVersionManager.m */,
+				D09F30D6231678DE0065E334 /* UIImage+KY.h */,
+				D09F30D7231678DE0065E334 /* UIImage+KY.m */,
+				D09F30E223167F840065E334 /* UIApplication+KY.h */,
+				D09F30E323167F840065E334 /* UIApplication+KY.m */,
+				D04F3FB42316851D00E650AD /* UIDevice+KY.h */,
+				D04F3FB52316851D00E650AD /* UIDevice+KY.m */,
 			);
 			name = Core;
 			path = KYBaseKit/Classes/Core;
@@ -449,18 +473,22 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04F3FB62316851D00E650AD /* UIDevice+KY.h in Headers */,
 				230A48D9E3673E9E4513DD14C1187688 /* KYBaseKit-umbrella.h in Headers */,
 				90C145B3806F3A814DAB7D11354C59CC /* KYBaseKit.h in Headers */,
 				67FA3467B0DBA17464521D0711ED0796 /* KYBaseMacro.h in Headers */,
 				48C9BC807014888999F03D2506CE5B8E /* KYKeychain.h in Headers */,
+				D09F30D8231678DE0065E334 /* UIImage+KY.h in Headers */,
 				D05EE58823161A0B006C849C /* UIColor+YK.h in Headers */,
 				791337BFE09AF3955B9C81EDFC349F02 /* NSObject+KYLayout.h in Headers */,
-				D05EE595231675AF006C849C /* KYVersionManager.h in Headers */,
+				D09F30E423167F840065E334 /* UIApplication+KY.h in Headers */,
 				D05EE5902316750B006C849C /* NSNumber+KY.h in Headers */,
 				60ECAE4F2DB1FD3708696CC0021EE691 /* NSObject+KYRuntime.h in Headers */,
 				D05EE58D23167168006C849C /* NSString+KY.h in Headers */,
 				D05EE58423161546006C849C /* YKNetworkMonitor.h in Headers */,
+				D04F3FBB2316897500E650AD /* KYVersionManager.h in Headers */,
 				D05EE5802315266C006C849C /* KYOpenUDID.h in Headers */,
+				D09F30DD231679830065E334 /* KYSimulateIDFA.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,9 +646,14 @@
 				D05EE58C23167168006C849C /* NSString+KY.m in Sources */,
 				E88E685904740C4A70F8C38B2A5F36E4 /* KYBaseKit-dummy.m in Sources */,
 				E76B8ED6FC25F8E66A2A3EF3D77A7110 /* KYKeychain.m in Sources */,
+				D09F30D9231678DE0065E334 /* UIImage+KY.m in Sources */,
+				D04F3FBA2316897500E650AD /* KYVersionManager.m in Sources */,
 				D05EE5912316750B006C849C /* NSNumber+KY.m in Sources */,
+				D04F3FB72316851D00E650AD /* UIDevice+KY.m in Sources */,
 				9AD568F623CC2626860D0AF7A922B005 /* NSObject+KYLayout.m in Sources */,
+				D09F30E523167F840065E334 /* UIApplication+KY.m in Sources */,
 				D05EE58523161546006C849C /* YKNetworkMonitor.m in Sources */,
+				D09F30DC231679830065E334 /* KYSimulateIDFA.m in Sources */,
 				5B037A11B71FF742BC524C3532D67617 /* NSObject+KYRuntime.m in Sources */,
 				D05EE5812315266C006C849C /* KYOpenUDID.m in Sources */,
 				D05EE58923161A0B006C849C /* UIColor+YK.m in Sources */,
@@ -652,7 +685,6 @@
 				E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */,
 				88396E68DC05A379282F3B374F75F43C /* FBSnapshotTestController.m in Sources */,
 				9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */,
-				D09F30D5231676A30065E334 /* KYVersionManager.m in Sources */,
 				11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */,
 				2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */,
 				14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */,

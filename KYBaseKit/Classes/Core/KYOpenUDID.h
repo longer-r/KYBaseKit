@@ -9,8 +9,8 @@
 
 //
 // Usage:
-//    #include "BBPOpenUDID.h"
-//    NSString* openUDID = [BBPOpenUDID value];
+//    #include "KYOpenUDID.h"
+//    NSString* openUDID = [KYOpenUDID value];
 //
 
 NS_ASSUME_NONNULL_BEGIN

@@ -9,7 +9,7 @@
 #import "KYBaseMacro.h"
 #import "NSString+KY.h"
 
-YKSYNTH_DUMMY_CLASS(UIColor_YK)
+KYSYNTH_DUMMY_CLASS(UIColor_YK)
 
 #define CLAMP_COLOR_VALUE(v) (v) = (v) < 0 ? 0 : (v) > 1 ? 1 : (v)
 

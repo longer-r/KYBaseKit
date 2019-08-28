@@ -223,10 +223,10 @@ if ([_target respondsToSelector:@selector(_selector)]) {        \
  Example:
  YYSYNTH_DUMMY_CLASS(UIColor_YK)
  */
-#ifndef YKSYNTH_DUMMY_CLASS
-#define YKSYNTH_DUMMY_CLASS(_name_) \
-@interface YKSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
-@implementation YKSYNTH_DUMMY_CLASS_ ## _name_ @end
+#ifndef KYSYNTH_DUMMY_CLASS
+#define KYSYNTH_DUMMY_CLASS(_name_) \
+@interface KYSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation KYSYNTH_DUMMY_CLASS_ ## _name_ @end
 #endif
 
 

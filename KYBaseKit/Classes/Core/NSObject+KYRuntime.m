@@ -11,7 +11,7 @@
 #import <objc/runtime.h>
 
 
-YKSYNTH_DUMMY_CLASS(NSObject_KYRuntime)
+KYSYNTH_DUMMY_CLASS(NSObject_KYRuntime)
 
 @implementation NSObject (KYRuntime)
 

@@ -9,6 +9,8 @@
 #import "NSString+KY.h"
 #import "KYBaseMacro.h"
 
+KYSYNTH_DUMMY_CLASS(NSNumber_YK)
+
 @implementation NSNumber (KY)
 
 + (NSNumber *)ky_numberWithString:(NSString *)string {

@@ -10,7 +10,7 @@
 #import "NSNumber+KY.h"
 #import "KYBaseMacro.h"
 
-YKSYNTH_DUMMY_CLASS(NSString_KY)
+KYSYNTH_DUMMY_CLASS(NSString_KY)
 
 @implementation NSString (KY)
 

@@ -1,8 +1,8 @@
 //
 //  KYVersionManager.h
-//  AFNetworking
+//  KYBaseKit
 //
-//  Created by 涂勇彬 on 2018/9/4.
+//  Created by zr on 2019/8/28.
 //
 
 #import <Foundation/Foundation.h>
