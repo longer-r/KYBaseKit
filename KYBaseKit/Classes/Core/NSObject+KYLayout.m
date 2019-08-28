@@ -8,6 +8,7 @@
 #import "NSObject+KYLayout.h"
 #import "KYBaseMacro.h"
 
+YKSYNTH_DUMMY_CLASS(NSObject_KYLayout)
 @implementation NSObject (KYLayout)
 
 //设计稿布局基准

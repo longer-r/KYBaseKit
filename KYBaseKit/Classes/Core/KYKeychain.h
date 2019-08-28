@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KYKeyChain : NSObject
+@interface KYKeychain : NSObject
 
 + (NSMutableDictionary *)getKeychainQuery:(NSString *)service;
 + (void)save:(NSString *)service data:(id)data;

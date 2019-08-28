@@ -5,9 +5,9 @@
 //  Created by zr on 2019/8/27.
 //
 
-#import "KYKeyChain.h"
+#import "KYKeychain.h"
 
-@implementation KYKeyChain
+@implementation KYKeychain
 
 + (NSMutableDictionary *)getKeychainQuery:(NSString *)service {
     return [NSMutableDictionary dictionaryWithObjectsAndKeys:

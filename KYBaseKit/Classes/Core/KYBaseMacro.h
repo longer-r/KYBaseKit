@@ -215,6 +215,22 @@ if ([_target respondsToSelector:@selector(_selector)]) {        \
 #endif
 
 /**
+ Add this macro before each category implementation, so we don't have to use
+ -all_load or -force_load to load object files from static libraries that only
+ contain categories and no classes.
+ More info: http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html .
+ *******************************************************************************
+ Example:
+ YYSYNTH_DUMMY_CLASS(UIColor_YK)
+ */
+#ifndef YKSYNTH_DUMMY_CLASS
+#define YKSYNTH_DUMMY_CLASS(_name_) \
+@interface YKSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation YKSYNTH_DUMMY_CLASS_ ## _name_ @end
+#endif
+
+
+/**
 Synthsize a dynamic object property in @implementation scope.
 It allows us to add custom properties to existing classes in categories.
 

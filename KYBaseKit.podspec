@@ -46,6 +46,7 @@ TODO: Add long description of the pod here.
     puts 'Notice: KYBaseKit is source now'
 
     s.source_files = 'KYBaseKit/Classes/**/*'
+    s.prefix_header_contents = ''
   end
   
   # s.resource_bundles = {

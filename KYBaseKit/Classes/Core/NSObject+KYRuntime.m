@@ -6,8 +6,12 @@
 //
 
 #import "NSObject+KYRuntime.h"
+#import "KYBaseMacro.h"
 #import <objc/objc.h>
 #import <objc/runtime.h>
+
+
+YKSYNTH_DUMMY_CLASS(NSObject_KYRuntime)
 
 @implementation NSObject (KYRuntime)
 
