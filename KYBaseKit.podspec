@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'KYBaseKit'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of KYBaseKit.'
 
 # This description is used to generate tags and improve search results.
@@ -46,7 +46,7 @@ TODO: Add long description of the pod here.
     puts 'Notice: KYBaseKit is source now'
 
     s.source_files = 'KYBaseKit/Classes/**/*'
-    s.prefix_header_contents = ''
+    s.prefix_header_contents = '#import "KYBaseKit.h"'
   end
   
   # s.resource_bundles = {
