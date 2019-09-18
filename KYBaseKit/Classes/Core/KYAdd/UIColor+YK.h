@@ -42,7 +42,7 @@ extern void KY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
  The `#` or "0x" sign is not required.
  */
 #ifndef KY_UIColorHex
-#define KY_UIColorHex(_hex_)   [UIColor KY_colorWithHexString:((__bridge NSString *)CFSTR(#_hex_))]
+#define KY_UIColorHex(_hex_)   [UIColor ky_colorWithHexString:((__bridge NSString *)CFSTR(#_hex_))]
 #endif
 
 //十六进制颜色
