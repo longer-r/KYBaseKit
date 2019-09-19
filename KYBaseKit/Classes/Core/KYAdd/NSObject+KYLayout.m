@@ -12,6 +12,18 @@ KYSYNTH_DUMMY_CLASS(NSObject_KYLayout)
 @implementation NSObject (KYLayout)
 
 //设计稿布局基准
+-(CGSize)inner_baseSize {
+    
+    CGSize baseSize;
+    if (KY_IPAD) {
+        baseSize = self.ky_isBaseVertical ? CGSizeMake(1024, 768) : CGSizeMake(768, 1024);
+    }else {
+        baseSize = self.ky_isBaseVertical ? CGSizeMake(667, 375) : CGSizeMake(375, 667);
+    }
+    
+    return baseSize;
+}
+
 +(CGSize)inner_baseSize {
     
     CGSize baseSize;
@@ -34,12 +46,23 @@ KYSYNTH_DUMMY_CLASS(NSObject_KYLayout)
     }
 }
 
+
+- (CGFloat)inner_currentScale {
+    
+    float baseWidth = self.inner_baseSize.width;
+    return KY_SCREEN_WIDTH / baseWidth;
+}
+
 + (CGFloat)inner_currentScale {
     
     float baseWidth = self.inner_baseSize.width;
     return KY_SCREEN_WIDTH / baseWidth;
 }
 
+- (CGFloat)ky_getWidth:(CGFloat)originWidth {
+    
+    return originWidth * self.inner_currentScale;
+}
 
 + (CGFloat)ky_getWidth:(CGFloat)originWidth {
     
