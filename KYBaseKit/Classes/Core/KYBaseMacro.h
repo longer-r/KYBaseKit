@@ -309,6 +309,7 @@ return cValue; \
 
 #pragma mark - 其他
 #define KYLocalString(str) NSLocalizedString(str, nil)
+#define KYLocalImage(imageName) [UIImage imageNamed:@"imageName"]
 #define KYDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
 //版本号
 #define KY_AppVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
