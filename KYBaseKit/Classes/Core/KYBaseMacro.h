@@ -308,6 +308,7 @@ return cValue; \
 #endif
 
 #pragma mark - 其他
+#define KYString(fmt,...) [NSString stringWithFormat:fmt, ##__VA_ARGS__]
 #define KYLocalString(str) NSLocalizedString(str, nil)
 #define KYLocalImage(imageName) [UIImage imageNamed:imageName]
 #define KYDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
