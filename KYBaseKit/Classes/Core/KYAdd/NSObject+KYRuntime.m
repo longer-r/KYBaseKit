@@ -15,19 +15,19 @@ KYSYNTH_DUMMY_CLASS(NSObject_KYRuntime)
 
 @implementation NSObject (KYRuntime)
 
-+ (BOOL)bbp_swizzleInstanceMethod:(SEL)originalSel targetSel:(SEL)targetSel {
++ (BOOL)ky_swizzleInstanceMethod:(SEL)originalSel targetSel:(SEL)targetSel {
     
-    return [self bbp_swizzleInstanceMethod:[self class] originalSel:originalSel targetClass:[self class] targetSel:targetSel];
+    return [self ky_swizzleInstanceMethod:[self class] originalSel:originalSel targetClass:[self class] targetSel:targetSel];
 }
 
-+ (BOOL)bbp_swizzleInstanceMethod:(SEL)originalSel targetClass:(Class)targetClass targetSel:(SEL)targetSel {
++ (BOOL)ky_swizzleInstanceMethod:(SEL)originalSel targetClass:(Class)targetClass targetSel:(SEL)targetSel {
     if (!originalSel || !targetClass || !targetSel) {
         return NO;
     }
-    return [self bbp_swizzleInstanceMethod:[self class] originalSel:originalSel targetClass:targetClass targetSel:targetSel];
+    return [self ky_swizzleInstanceMethod:[self class] originalSel:originalSel targetClass:targetClass targetSel:targetSel];
 }
 
-+ (BOOL)bbp_swizzleInstanceMethod:(Class)originalClass originalSel:(SEL)originalSel targetClass:(Class)targetClass targetSel:(SEL)targetSel {
++ (BOOL)ky_swizzleInstanceMethod:(Class)originalClass originalSel:(SEL)originalSel targetClass:(Class)targetClass targetSel:(SEL)targetSel {
     if (!originalClass || !originalSel || !targetClass || !targetSel) {
         return NO;
     }
@@ -50,17 +50,17 @@ KYSYNTH_DUMMY_CLASS(NSObject_KYRuntime)
     return YES;
 }
 
-+ (BOOL)bbp_swizzleClassMethod:(SEL)originalSel targetSel:(SEL)targetSel {
++ (BOOL)ky_swizzleClassMethod:(SEL)originalSel targetSel:(SEL)targetSel {
     
-    return [self bbp_swizzleClassMethod:object_getClass(self) originalSel:originalSel targetClass:object_getClass(self) targetSel:targetSel];
+    return [self ky_swizzleClassMethod:object_getClass(self) originalSel:originalSel targetClass:object_getClass(self) targetSel:targetSel];
 }
 
-+ (BOOL)bbp_swizzleClassMethod:(SEL)originalSel targetClass:(Class)targetClass targetSel:(SEL)targetSel {
++ (BOOL)ky_swizzleClassMethod:(SEL)originalSel targetClass:(Class)targetClass targetSel:(SEL)targetSel {
     
-    return [self bbp_swizzleClassMethod:object_getClass(self) originalSel:originalSel targetClass:targetClass targetSel:targetSel];
+    return [self ky_swizzleClassMethod:object_getClass(self) originalSel:originalSel targetClass:targetClass targetSel:targetSel];
 }
 
-+ (BOOL)bbp_swizzleClassMethod:(Class)originalClass originalSel:(SEL)originalSel targetClass:(Class)targetClass targetSel:(SEL)targetSel {
++ (BOOL)ky_swizzleClassMethod:(Class)originalClass originalSel:(SEL)originalSel targetClass:(Class)targetClass targetSel:(SEL)targetSel {
     if (!originalClass || !originalSel || !targetClass || !targetSel) {
         return NO;
     }
@@ -71,19 +71,19 @@ KYSYNTH_DUMMY_CLASS(NSObject_KYRuntime)
     return YES;
 }
 
-- (void)bbp_setAssociateValue:(id)value withKey:(void *)key {
+- (void)ky_setAssociateValue:(id)value withKey:(void *)key {
     objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void)bbp_setAssociateWeakValue:(id)value withKey:(void *)key {
+- (void)ky_setAssociateWeakValue:(id)value withKey:(void *)key {
     objc_setAssociatedObject(self, key, value, OBJC_ASSOCIATION_ASSIGN);
 }
 
-- (void)bbp_removeAssociatedValues {
+- (void)ky_removeAssociatedValues {
     objc_removeAssociatedObjects(self);
 }
 
-- (id)bbp_getAssociatedValueForKey:(void *)key {
+- (id)ky_getAssociatedValueForKey:(void *)key {
     return objc_getAssociatedObject(self, key);
 }
 

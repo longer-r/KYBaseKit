@@ -19,6 +19,14 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIButton (KY)
 
 @property (nonatomic, assign) CGFloat fontSize;
+/*对点击响应区域进行调整,负值放大,正直缩小
+ origin.x    += ky_hitInsets.left;
+ origin.y    += ky_hitInsets.top;
+ size.width  -= (ky_hitInsets.left + ky_hitInsets.right);
+ size.height -= (insetsky_hitInsetstop  + ky_hitInsets.bottom)
+ */
+@property (nonatomic, assign) UIEdgeInsets ky_hitInsets;
+
 
 - (void)setBackground:(UIImage *)normalImage :(UIImage *)highlightImage;
 

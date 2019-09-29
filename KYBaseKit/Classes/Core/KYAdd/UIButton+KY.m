@@ -6,8 +6,29 @@
 //
 
 #import "UIButton+KY.h"
+#import <objc/runtime.h>
+#import "NSObject+KYRuntime.h"
 
 @implementation UIButton (KY)
+
+KYSYNTH_DYNAMIC_PROPERTY_CTYPE(ky_hitInsets, setKy_hitInsets, UIEdgeInsets)
+
++ (void)load {
+
+    [UIButton ky_swizzleInstanceMethod:@selector(pointInside:withEvent:) targetSel:@selector(ky_pointInside:withEvent:)];
+}
+
+- (BOOL)ky_pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    if (UIEdgeInsetsEqualToEdgeInsets(self.ky_hitInsets, UIEdgeInsetsZero) || !self.enabled || self.hidden) {
+        return [super pointInside:point withEvent:event];
+    }
+    
+    CGRect relativeFrame = self.bounds;
+    CGRect hitFrame = UIEdgeInsetsInsetRect(relativeFrame, self.ky_hitInsets);
+    
+    return CGRectContainsPoint(hitFrame, point);
+}
+
 
 - (CGFloat)fontSize
 {
