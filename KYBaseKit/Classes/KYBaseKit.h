@@ -10,5 +10,6 @@
 #import "UIDevice+KY.h"
 #import "YKNetworkMonitor.h"
 #import "UIButton+KY.h"
+#import "UILabel+KY.h"
 
 
