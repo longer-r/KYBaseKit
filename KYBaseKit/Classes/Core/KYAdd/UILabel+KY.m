@@ -9,7 +9,7 @@
 
 @implementation UILabel (KY)
 
-+ (UILabel *)labelWithText:(NSString *)text font:(int)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment) textAlignment;
++ (UILabel *)labelWithText:(NSString * _Nullable)text font:(int)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment) textAlignment;
 {
     UILabel *label = [[UILabel alloc] init];
     label.text = NSLocalizedString(text,nil);
@@ -19,7 +19,7 @@
     return label;
 }
 
-+ (UILabel *)labelWithText:(NSString *)text blodFont:(int)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment) textAlignment;
++ (UILabel *)labelWithText:(NSString * _Nullable)text blodFont:(int)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment) textAlignment;
 {
     UILabel *label = [[UILabel alloc] init];
     label.text = NSLocalizedString(text,nil);

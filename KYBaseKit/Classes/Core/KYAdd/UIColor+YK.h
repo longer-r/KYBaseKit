@@ -45,11 +45,8 @@ extern void KY_HSL2HSB(CGFloat h, CGFloat s, CGFloat l,
 #define KY_UIColorHex(_hex_)   [UIColor ky_colorWithHexString:((__bridge NSString *)CFSTR(#_hex_))]
 #endif
 
-//十六进制颜色
-#define KY_UIColorHex_Alpha(_hex_, a) [UIColor colorWithRed:((_hex_ >> 16) & 0x000000FF)/255.0f            \
-green:((_hex_ >> 8) & 0x000000FF)/255.0f    \
-blue:((_hex_) & 0x000000FF)/255.0f            \
-alpha:a]
+#define KY_UIColorHex_Alpha(_hex_, a) [UIColor ky_colorWithHexString:((__bridge NSString *)CFSTR(#_hex_)) alpha:a]
+
 //RGBA颜色
 #define KY_UIColorRGBA(r,g,b,a)   [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 
@@ -183,6 +180,7 @@ alpha:a]
  */
 + (nullable UIColor *)ky_colorWithHexString:(NSString *)hexStr;
 
++ (nullable UIColor *)ky_colorWithHexString:(NSString *)hexStr alpha:(CGFloat)alpha;
 /**
  Creates and returns a color object by add new color.
  

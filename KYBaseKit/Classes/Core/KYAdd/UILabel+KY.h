@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UILabel (KY)
 
-+ (UILabel *)labelWithText:(NSString *)text font:(int)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment) textAlignment;
++ (UILabel *)labelWithText:(NSString * _Nullable)text font:(int)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment) textAlignment;
 
-+ (UILabel *)labelWithText:(NSString *)text blodFont:(int)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment) textAlignment;
++ (UILabel *)labelWithText:(NSString * _Nullable)text blodFont:(int)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment) textAlignment;
 
 /**
  *  改变行间距

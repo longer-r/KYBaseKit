@@ -300,6 +300,15 @@ static BOOL ky_hexStrToRGBA(NSString *str,
     return nil;
 }
 
++ (instancetype)ky_colorWithHexString:(NSString *)hexStr alpha:(CGFloat)alpha{
+    CGFloat r, g, b, a;
+    if (ky_hexStrToRGBA(hexStr, &r, &g, &b, &a)) {
+        return [UIColor colorWithRed:r green:g blue:b alpha:alpha];
+    }
+    return nil;
+}
+
+
 - (NSString *)ky_hexString {
     return [self ky_hexStringWithAlpha:NO];
 }
