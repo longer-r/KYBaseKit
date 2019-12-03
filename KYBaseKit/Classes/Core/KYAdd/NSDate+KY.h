@@ -133,6 +133,29 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable NSDate *)ky_dateWithISOFormatString:(NSString *)dateString;
 
 
+/// 日期装时间戳
+/// @param date 日期
+/// @param format 日期的格式化方式,默认使用foramt yyyy-MM-dd HH:mm:ss
++ (nullable NSString *)ky_timestampWithDate:(NSDate *)date format:(nullable NSString *)format;
+
+/// 字符串转换成时间戳(单位毫秒),默认使用foramt yyyy-MM-dd HH:mm:ss
+/// @param dateString 日期字符串
++ (nullable NSString *)ky_timestampWithString:(NSString *)dateString;
+
+/// 字符串转换成时间戳(单位毫秒)
+/// @param dateString 日期字符串
+/// @param format 日期的格式化方式,默认使用foramt yyyy-MM-dd HH:mm:ss
++ (nullable NSString *)ky_timestampWithString:(NSString *)dateString format:(nullable NSString *)format;
+
+/// 时间字符串转日期字符串,默认使用foramt yyyy-MM-dd HH:mm:ss
+/// @param timestamp 时间字符串
++ (nullable NSString *)ky_dateStrWithTimestamp:(NSString *)timestamp;
+
+/// 时间字符串转日期字符串
+/// @param timestamp 时间字符串
+/// @param format 日期的格式化方式,默认使用foramt yyyy-MM-dd HH:mm:ss
++ (nullable NSString *)ky_dateStrWithTimestamp:(NSString *)timestamp format:(nullable NSString *)format;
+
 @end
 
 NS_ASSUME_NONNULL_END

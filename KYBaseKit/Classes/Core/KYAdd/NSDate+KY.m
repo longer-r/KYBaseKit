@@ -191,4 +191,54 @@ KYSYNTH_DUMMY_CLASS(NSDate_KY)
     return [formatter dateFromString:dateString];
 }
 
++ (nullable NSString *)ky_timestampWithDate:(NSDate *)date format:(nullable NSString *)format;
+{
+    return [NSDate ky_timestampWithString:[date ky_stringWithFormat:format] format:format];
+}
+
++ (nullable NSString *)ky_timestampWithString:(NSString *)dateString;
+{
+    return [NSDate ky_timestampWithString:dateString format:nil];
+}
+
++ (nullable NSString *)ky_timestampWithString:(NSString *)dateString format:(nullable NSString *)format;
+{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    if (formatter) {
+        [formatter setDateFormat:format];
+    }
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+    [formatter setTimeZone:timeZone];
+    
+    NSDate *datenow = [formatter dateFromString:dateString];
+    //时间转时间戳的方法:
+    NSInteger timeSp = [[NSNumber numberWithDouble:[datenow timeIntervalSince1970]] integerValue];
+    return [NSString stringWithFormat:@"%ld", (timeSp * 1000)];
+}
+
++ (nullable NSString *)ky_dateStrWithTimestamp:(NSString *)timestamp;
+{
+    return [NSDate ky_dateStrWithTimestamp:timestamp format:nil];
+}
+
++ (nullable NSString *)ky_dateStrWithTimestamp:(NSString *)timestamp format:(NSString *)format;
+{
+    long long time = [timestamp longLongValue];
+    //如果是13位字符串，需要除以1000,(13位代表的是毫秒，需要除以1000)
+    if (timestamp.length == 13) {
+        time = time / 1000;
+    }
+    NSDate *date = [[NSDate alloc]initWithTimeIntervalSince1970:time];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    if (formatter) {
+        [formatter setDateFormat:format];
+    }
+    NSString*timeString=[formatter stringFromDate:date];
+    return timeString;
+
+}
 @end
