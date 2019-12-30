@@ -207,7 +207,7 @@ KYSYNTH_DUMMY_CLASS(NSDate_KY)
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     [formatter setTimeStyle:NSDateFormatterShortStyle];
     [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
-    if (formatter) {
+    if (format) {
         [formatter setDateFormat:format];
     }
     NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
@@ -216,7 +216,7 @@ KYSYNTH_DUMMY_CLASS(NSDate_KY)
     NSDate *datenow = [formatter dateFromString:dateString];
     //时间转时间戳的方法:
     NSInteger timeSp = [[NSNumber numberWithDouble:[datenow timeIntervalSince1970]] integerValue];
-    return [NSString stringWithFormat:@"%ld", (timeSp * 1000)];
+    return [NSString stringWithFormat:@"%ld", (long)(timeSp * 1000)];
 }
 
 + (nullable NSString *)ky_dateStrWithTimestamp:(NSString *)timestamp;
@@ -234,7 +234,9 @@ KYSYNTH_DUMMY_CLASS(NSDate_KY)
     NSDate *date = [[NSDate alloc]initWithTimeIntervalSince1970:time];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    if (formatter) {
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+    [formatter setTimeZone:timeZone];
+    if (format) {
         [formatter setDateFormat:format];
     }
     NSString*timeString=[formatter stringFromDate:date];
