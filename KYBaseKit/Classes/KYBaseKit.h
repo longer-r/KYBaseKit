@@ -8,7 +8,7 @@
 #import "NSDate+KY.h"
 #import "KYBaseMacro.h"
 #import "UIDevice+KY.h"
-#import "YKNetworkMonitor.h"
+#import "KYNetworkMonitor.h"
 #import "UIButton+KY.h"
 #import "UILabel+KY.h"
 
