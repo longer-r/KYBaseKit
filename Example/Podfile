@@ -1,6 +1,7 @@
 #use_frameworks!
 # 源文件引用(默认)
 source 'https://gitee.com/kyd_iOSGroup/kyd_specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '8.0'
 

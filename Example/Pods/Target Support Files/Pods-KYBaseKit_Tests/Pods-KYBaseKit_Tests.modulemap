@@ -1,4 +1,4 @@
-framework module Pods_KYBaseKit_Tests {
+module Pods_KYBaseKit_Tests {
   umbrella header "Pods-KYBaseKit_Tests-umbrella.h"
 
   export *
